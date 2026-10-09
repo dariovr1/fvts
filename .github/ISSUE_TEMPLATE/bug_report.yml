@@ -1,0 +1,31 @@
+name: Bug report
+description: Something is broken
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What did you expect, and what actually happened?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: The exact commands you ran (redact any private URLs).
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: video-to-skill version
+      description: Output of `video-to-skill --version`.
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: OS and Python version
+    validations:
+      required: true

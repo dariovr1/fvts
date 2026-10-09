@@ -1,0 +1,44 @@
+# Runtime output
+runs/
+out/
+
+# Downloaded / generated media
+*.mp4
+*.mkv
+*.webm
+*.wav
+*.vtt
+*.srt
+info.json
+transcript.json
+transcript.txt
+MANIFEST.txt
+frames/
+grids/
+frames.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Tooling caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

@@ -1,0 +1,65 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "video-to-skill"
+version = "0.1.0"
+description = "Turn a single YouTube video into a well-formed, reusable agent skill (SKILL.md)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "video-to-skill contributors" }]
+keywords = ["youtube", "skill", "agent", "transcription", "whisper", "llm"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Multimedia :: Video",
+  "Topic :: Text Processing",
+]
+dependencies = [
+  "yt-dlp>=2024.1.1",
+  "imageio-ffmpeg>=0.4.9",
+  "pillow>=10.0.0",
+]
+
+[project.optional-dependencies]
+whisper = ["faster-whisper>=1.0.0"]
+dev = [
+  "pytest>=7.4",
+  "ruff>=0.5",
+]
+
+[project.scripts]
+video-to-skill = "video_to_skill.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/dariovr1/video-to-skill"
+Repository = "https://github.com/dariovr1/video-to-skill"
+Issues = "https://github.com/dariovr1/video-to-skill/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/video_to_skill"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+markers = [
+  "network: tests that require network access (deselected unless VTS_NETWORK_TESTS=1)",
+]
