@@ -2,13 +2,23 @@
 runs/
 out/
 
+# Secrets
+.env
+.env.*
+*.local
+
 # Downloaded / generated media
 *.mp4
 *.mkv
 *.webm
+*.m4a
+*.opus
+*.aac
+*.ogv
 *.wav
 *.vtt
 *.srt
+*.log
 info.json
 transcript.json
 transcript.txt
