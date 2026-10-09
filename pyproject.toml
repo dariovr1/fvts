@@ -5,11 +5,11 @@ build-backend = "hatchling.build"
 [project]
 name = "video-to-skill"
 version = "0.1.0"
-description = "Turn a single YouTube video into a well-formed, reusable agent skill (SKILL.md)."
+description = "fvts: from video to skill. Turn a single YouTube video into a well-formed, reusable agent skill (SKILL.md)."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { file = "LICENSE" }
-authors = [{ name = "video-to-skill contributors" }]
+authors = [{ name = "fvts contributors" }]
 keywords = ["youtube", "skill", "agent", "transcription", "whisper", "llm"]
 classifiers = [
   "Development Status :: 3 - Alpha",
@@ -41,9 +41,9 @@ dev = [
 video-to-skill = "video_to_skill.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/dariovr1/video-to-skill"
-Repository = "https://github.com/dariovr1/video-to-skill"
-Issues = "https://github.com/dariovr1/video-to-skill/issues"
+Homepage = "https://github.com/dariovr1/fvts"
+Repository = "https://github.com/dariovr1/fvts"
+Issues = "https://github.com/dariovr1/fvts/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/video_to_skill"]

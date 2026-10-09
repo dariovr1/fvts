@@ -52,3 +52,9 @@ htmlcov/
 Thumbs.db
 .idea/
 .vscode/
+
+# blind-spots
+.blind-spots/
+
+# Archives
+*.zip
